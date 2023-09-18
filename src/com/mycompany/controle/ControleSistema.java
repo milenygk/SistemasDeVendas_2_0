@@ -116,4 +116,14 @@ public class ControleSistema {
              }
         }
     }
+    
+    public static void vender(int indiceProduto){
+    
+      
+      Object object = produtos.get(indiceProduto);
+         
+//         System.out.println("Qual produto deseja vender? ");
+         
+            System.out.println("Qual quantidade do produto" + object +  " deseja vender? ");
+    }
 }

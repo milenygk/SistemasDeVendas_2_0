@@ -22,6 +22,8 @@ public class VisaoMenu {
         System.out.println("2 - Alterar Produto");
         System.out.println("3 - Remover Produto");
         System.out.println("4 - Listar Produtos");
+        System.out.println("5 - Vender Produtos");
+        
         System.out.println(" =======================================");
         int opcaoMenu = new Scanner(System.in).nextInt();
         
@@ -94,7 +96,7 @@ public class VisaoMenu {
     }
     
      public static int menuRemocaoProduto(){
-        System.out.println("==========ALTERAR PRODUTO==========");
+        System.out.println("==========REMOVER PRODUTO==========");
         System.out.println("Qual produto deseja remover?");
         
         for(int i = 0; i < ControleSistema.produtos.size(); i++){
@@ -106,4 +108,20 @@ public class VisaoMenu {
         
         return produtoRemoover;
     }
+     public static int menuVenderProduto(){
+        System.out.println("==========VENDER PRODUTO==========");
+        System.out.println("Qual produto deseja Vender?");
+        
+         for(int i = 0; i < ControleSistema.produtos.size(); i++){
+            System.out.println(i + 1 + " | " + ControleSistema.produtos.get(i));
+        }
+        
+        System.out.println("====================================");
+        int produtoVender = new Scanner(System.in).nextInt();
+        
+//         System.out.println("Qual a quantidade do produto" +  +  " deseja vender? ");
+//         System.out.println(quantidadeDeProduto);
+
+        return produtoVender;
+     }
 }
