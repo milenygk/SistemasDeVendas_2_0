@@ -5,7 +5,9 @@
 package com.mycompany.visao;
 
 import com.mycompany.controle.ControleSistema;
+import com.mycompany.modelo.Celular;
 import com.mycompany.modelo.Computador;
+import com.mycompany.modelo.Televisao;
 import com.mycompany.modelo.VideoGame;
 import java.util.Scanner;
 
@@ -31,6 +33,8 @@ public class VisaoMenu {
         System.out.println("Qual categoria de produto deseja cadastrar?");
         System.out.println("1 - Video Game");
         System.out.println("2 - Computador");
+        System.out.println("3 - Televisão");
+        System.out.println("4 - Celular");
         System.out.println("=====================================");
         int opcaoProduto = new Scanner(System.in).nextInt();
         
@@ -68,8 +72,24 @@ public class VisaoMenu {
            ((Computador) object).setMemoriaRam(new Scanner(System.in).nextDouble());
             System.out.println("Novo processador: ");
            ((Computador) object).setProcessador(new Scanner(System.in).nextLine());
-          
+        }else if(object instanceof Televisao){
+             System.out.println("Novo nome: ");
+            ((Televisao) object).setNome(new Scanner(System.in).nextLine());
+            System.out.println("Novo preço: ");
+            ((Televisao) object).setPreco(new Scanner(System.in).nextDouble());
+            System.out.println("Nova quantidade de Polegadas: ");
+           ((Televisao) object).setPolegadas(new Scanner(System.in).nextLine());
+        }else if(object instanceof Celular){
+            System.out.println("Novo nome: ");
+            ((Celular) object).setNome(new Scanner(System.in).nextLine());
+            System.out.println("Novo preço: ");
+            ((Celular) object).setPreco(new Scanner(System.in).nextDouble());
+            System.out.println("Nova quantidade de memoria RAM: ");
+           ((Celular) object).setMemoriaRam(new Scanner(System.in).nextDouble());
+            System.out.println("Nova quantidade de armazenamento: ");
+           ((Celular) object).setArmazenamento(new Scanner(System.in).nextLine());
         }
+        
         return object;
     }
     

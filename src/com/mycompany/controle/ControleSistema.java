@@ -4,11 +4,15 @@
  */
 package com.mycompany.controle;
 
+import com.mycompany.modelo.Celular;
 import com.mycompany.modelo.Computador;
+import com.mycompany.modelo.Televisao;
 import com.mycompany.modelo.VideoGame;
 import com.mycompany.outros.Constantes;
+import com.mycompany.visao.VisaoCelular;
 import com.mycompany.visao.VisaoComputador;
 import com.mycompany.visao.VisaoMenu;
+import com.mycompany.visao.VisaoTelevisao;
 import com.mycompany.visao.VisaoVideoGame;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -27,6 +31,10 @@ public class ControleSistema {
             produtos.add(VisaoVideoGame.menuCadastroVideoGame());
         }else if(opcaoProduto == 2){
              produtos.add(VisaoComputador.menuCadastro());
+        }else if(opcaoProduto == 3){
+            produtos.add(VisaoTelevisao.menuCadastroTelevisao());
+        }else if(opcaoProduto == 4){
+            produtos.add(VisaoCelular.menuCadastroCelular());
         }
     }
     
@@ -51,6 +59,22 @@ public class ControleSistema {
             
             computador = (Computador) VisaoMenu.menuAlteracaoProdutoInformacoes(computador);
             ControleSistema.produtos.set(indiceProduto, computador);
+        }else if(object instanceof Televisao){
+            Televisao televisao = new Televisao();
+            televisao = (Televisao) object;
+            
+            System.out.println("Alterando o produto: " + televisao.toString());
+            
+            televisao = (Televisao) VisaoMenu.menuAlteracaoProdutoInformacoes(televisao);
+            ControleSistema.produtos.set(indiceProduto, televisao);
+        }else if(object instanceof Celular){
+            Celular celular = new Celular();
+            celular = (Celular) object;
+            
+            System.out.println("Alterando o produto: " + celular.toString());
+            
+            celular = (Celular) VisaoMenu.menuAlteracaoProdutoInformacoes(celular);
+            ControleSistema.produtos.set(indiceProduto, celular);
         }
     }
     
@@ -64,6 +88,12 @@ public class ControleSistema {
             }else if(object instanceof Computador){
                 Computador computador = (Computador) object;
                 System.out.println(computador.toString());
+            }else if(object instanceof Televisao){
+                Televisao televisao = (Televisao) object;
+                System.out.println(televisao.toString());
+            }else if(object instanceof Celular){
+                Celular celular = (Celular) object;
+                System.out.println(celular.toString());
             }
         }
     }
