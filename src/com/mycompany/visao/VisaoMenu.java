@@ -118,9 +118,6 @@ public class VisaoMenu {
         
         System.out.println("====================================");
         int produtoVender = new Scanner(System.in).nextInt();
-        
-//         System.out.println("Qual a quantidade do produto" +  +  " deseja vender? ");
-//         System.out.println(quantidadeDeProduto);
 
         return produtoVender;
      }

@@ -118,12 +118,51 @@ public class ControleSistema {
     }
     
     public static void vender(int indiceProduto){
-    
-      
-      Object object = produtos.get(indiceProduto);
-         
-//         System.out.println("Qual produto deseja vender? ");
-         
-            System.out.println("Qual quantidade do produto" + object +  " deseja vender? ");
+       indiceProduto = indiceProduto - 1;
+       Object object = produtos.get(indiceProduto);
+       
+     if(object instanceof VideoGame){
+        VideoGame videoGame = new VideoGame();
+        videoGame = (VideoGame) object;
+        System.out.println("Quantas unidades do produto " + videoGame.getNome() + " deseja?");
+        
+      }else if(object instanceof Computador){
+        Computador computador = new Computador();
+        computador = (Computador) object;
+        System.out.println("Quantas unidades do produto " + computador.getNome() + " deseja?");
+        
+//        int quantidade = new Scanner(System.in).nextInt();
+//        Double preco = computador.getPreco();
+//        System.out.println(quantidade*preco);        
+      }else if(object instanceof Televisao){
+        Televisao televisao = new Televisao();
+        televisao = (Televisao) object;
+        System.out.println("Quantas unidades do produto " + televisao.getNome() + " deseja?");
+               
+      }else if(object instanceof Celular){
+        Celular celular = new Celular();
+        celular = (Celular) object;
+        System.out.println("Quantas unidades do produto " + celular.getNome() + " deseja?"); 
+        
+      }
+        int quantidade = new Scanner(System.in).nextInt();;
+        
+        if(object instanceof VideoGame){
+//            VideoGame videoGame = new VideoGame();;
+            Double preco = ((VideoGame) object).getPreco();
+            System.out.println(quantidade*preco);
+        }if(object instanceof Computador){
+//            Computador computador = new Computador();
+            Double preco = ((Computador) object).getPreco();
+            System.out.println(quantidade*preco);
+        }if(object instanceof Televisao){
+//            Televisao televisao = new Televisao();
+            Double preco = ((Televisao) object).getPreco();
+            System.out.println(quantidade*preco);
+        }if(object instanceof Celular){
+//            Celular celular = new Celular();
+            Double preco = ((Celular) object).getPreco();
+            System.out.println(quantidade*preco);
+        }
     }
 }
