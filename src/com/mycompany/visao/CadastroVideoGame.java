@@ -5,19 +5,19 @@
 package com.mycompany.visao;
 
 import com.mycompany.controle.ControleSistema;
-import com.mycompany.modelo.Computador;
+import com.mycompany.modelo.VideoGame;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author mileny.1948
  */
-public class CadastroComputador extends javax.swing.JFrame {
+public class CadastroVideoGame extends javax.swing.JFrame {
 
     /**
-     * Creates new form CadastroComputador
+     * Creates new form CadastroVideoGame
      */
-    public CadastroComputador() {
+    public CadastroVideoGame() {
         initComponents();
     }
 
@@ -31,18 +31,15 @@ public class CadastroComputador extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        tfPreco = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        tfNome = new javax.swing.JTextField();
-        tfMemoriaRam = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        tfProcessador = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        btnSalvar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        btnSalvar2 = new javax.swing.JButton();
+        btnCancelar2 = new javax.swing.JButton();
+        tfNome2 = new javax.swing.JTextField();
+        tfPreco2 = new javax.swing.JTextField();
+        tfPlataforma = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de computador");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Nome:");
@@ -51,19 +48,16 @@ public class CadastroComputador extends javax.swing.JFrame {
         jLabel2.setText("Preço:");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Memoria RAM:");
+        jLabel3.setText("Plataforma:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Processador:");
-
-        btnSalvar.setText("Salvar");
-        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvar2.setText("Salvar");
+        btnSalvar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarActionPerformed(evt);
+                btnSalvar2ActionPerformed(evt);
             }
         });
 
-        btnCancelar.setText("Cancelar");
+        btnCancelar2.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,22 +66,19 @@ public class CadastroComputador extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfNome2)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnSalvar)
+                        .addComponent(btnSalvar2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCancelar))
+                        .addComponent(btnCancelar2))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
-                            .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(tfMemoriaRam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                                .addComponent(tfPreco, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(tfProcessador, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 11, Short.MAX_VALUE)))
+                            .addComponent(tfPreco2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 68, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -96,56 +87,49 @@ public class CadastroComputador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(tfNome2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addComponent(tfPreco2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfMemoriaRam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfProcessador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addComponent(tfPlataforma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnSalvar2)
+                    .addComponent(btnCancelar2))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+    private void btnSalvar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar2ActionPerformed
        try{
-        Computador computador = new Computador();
+           VideoGame videoGame = new VideoGame();
         
-        computador.setNome(tfNome.getText());
-        computador.setPreco(Double.parseDouble(tfPreco.getText()));
-        computador.setMemoriaRam(Double.parseDouble(tfMemoriaRam.getText()));
-        computador.setProcessador(tfProcessador.getText());
+        videoGame.setNome(tfNome2.getText());
+        videoGame.setPreco(Double.parseDouble(tfPreco2.getText()));
+        videoGame.setPlataforma(tfPlataforma.getText());
         
-        ControleSistema.produtos.add(computador);
+        ControleSistema.produtos.add(videoGame);
         
-        JOptionPane.showMessageDialog(null, "Produto " + computador.getNome() + " inserido com sucesso!");
+           JOptionPane.showMessageDialog(null, "Produto " + videoGame.getNome() + " inserido com sucesso!");
         
-        tfNome.setText("");
-        tfPreco.setText("");
-        tfMemoriaRam.setText("");
-        tfProcessador.setText("");
+        tfNome2.setText("");
+        tfPreco2.setText("");
+        tfPlataforma.setText("");
               
        }catch(Exception e){
            JOptionPane.showMessageDialog(null, "Erro ao salvar!");
        }
        
        for(int i = 0; i < ControleSistema.produtos.size(); i++){
-//        System.out.println(ControleSistema.produtos.get(i));
           System.out.println(ControleSistema.produtos.get(i));
-       }
-    }//GEN-LAST:event_btnSalvarActionPerformed
+       }                                        
+    }//GEN-LAST:event_btnSalvar2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,34 +148,32 @@ public class CadastroComputador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CadastroComputador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroVideoGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CadastroComputador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroVideoGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CadastroComputador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroVideoGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CadastroComputador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroVideoGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CadastroComputador().setVisible(true);
+                new CadastroVideoGame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnSalvar;
+    private javax.swing.JButton btnCancelar2;
+    private javax.swing.JButton btnSalvar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField tfMemoriaRam;
-    private javax.swing.JTextField tfNome;
-    private javax.swing.JTextField tfPreco;
-    private javax.swing.JTextField tfProcessador;
+    private javax.swing.JTextField tfNome2;
+    private javax.swing.JTextField tfPlataforma;
+    private javax.swing.JTextField tfPreco2;
     // End of variables declaration//GEN-END:variables
 }

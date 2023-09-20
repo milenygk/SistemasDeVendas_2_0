@@ -38,7 +38,12 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Selecione a categoria que deseja cadastrar:");
 
-        cbCategorias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Video Game", "Computador", "Televisão", "Celular" }));
+        cbCategorias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computador", "Video Game", "Televisão", "Celular" }));
+        cbCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCategoriasActionPerformed(evt);
+            }
+        });
 
         btnOk.setText("OK");
         btnOk.addActionListener(new java.awt.event.ActionListener() {
@@ -75,9 +80,37 @@ public class MenuEscolhaCategoria extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
-    JOptionPane.showMessageDialog(null,cbCategorias.getSelectedItem());
-        
+//    JOptionPane.showMessageDialog(null,cbCategorias.getSelectedItem());
+      switch(cbCategorias.getSelectedIndex()){
+          case 0:
+              CadastroComputador cadasCadastroComputador = new CadastroComputador();
+              cadasCadastroComputador.setLocationRelativeTo(null);
+              cadasCadastroComputador.setVisible(true);
+              break;
+              
+          case 1:
+              CadastroVideoGame cadastroVideoGame = new CadastroVideoGame();
+              cadastroVideoGame.setLocationRelativeTo(null);
+              cadastroVideoGame.setVisible(true);
+              break;
+              
+          case 2:
+              CadastroTelevisao cadastroTelevisao = new CadastroTelevisao();
+              cadastroTelevisao.setLocationRelativeTo(null);
+              cadastroTelevisao.setVisible(true);
+              break;
+              
+          case 3:
+              CadastroCelular cadastroCelular = new CadastroCelular();
+              cadastroCelular.setLocationRelativeTo(null);
+              cadastroCelular.setVisible(true);
+              break;
+        }
     }//GEN-LAST:event_btnOkActionPerformed
+
+    private void cbCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCategoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbCategoriasActionPerformed
 
     /**
      * @param args the command line arguments

@@ -56,7 +56,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         btnListar.setText("Listar");
-        btnListar.setActionCommand("Listar");
+        btnListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListarActionPerformed(evt);
+            }
+        });
 
         btnVender.setText("Vender");
         btnVender.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +103,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        // TODO add your handling code here:
 //        JOptionPane.showMessageDialog(null, "O botão foi clicado!");
           MenuEscolhaCategoria menuEscolhaCategoria = new MenuEscolhaCategoria();
           
@@ -115,6 +118,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnVenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVenderActionPerformed
+
+    private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
+       MenuListagemDeProdutos menuListagemDeProdutos = new MenuListagemDeProdutos();
+       
+        menuListagemDeProdutos.setLocationRelativeTo(null);
+        menuListagemDeProdutos.setVisible(true);
+    }//GEN-LAST:event_btnListarActionPerformed
 
     /**
      * @param args the command line arguments
