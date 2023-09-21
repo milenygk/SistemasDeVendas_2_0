@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/controle/ControleSistema.java</file>
-            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/MenuPrincipal.java</file>
-            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/CadastroVideoGame.java</file>
+            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/MenuListagemDeProdutos.java</file>
+            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/CadastroComputador.java</file>
             <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/MenuEscolhaCategoria.java</file>
-            <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/CadastroCelular.java</file>
             <file>file:/C:/Users/mileny.1948/Documents/NetBeansProjects/SistemasVendas_2_0/src/com/mycompany/visao/VisaoMenu.java</file>
         </group>
     </open-files>

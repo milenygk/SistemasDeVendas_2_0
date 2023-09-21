@@ -41,7 +41,7 @@ public class CadastroCelular extends javax.swing.JFrame {
         tfMemoriaRam2 = new javax.swing.JTextField();
         tfArmazenamento = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Nome:");

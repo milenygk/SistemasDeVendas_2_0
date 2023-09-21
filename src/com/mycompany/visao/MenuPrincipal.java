@@ -120,10 +120,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVenderActionPerformed
 
     private void btnListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarActionPerformed
-       MenuListagemDeProdutos menuListagemDeProdutos = new MenuListagemDeProdutos();
-       
-        menuListagemDeProdutos.setLocationRelativeTo(null);
-        menuListagemDeProdutos.setVisible(true);
+//       MenuListagemDeProdutos menuListagemDeProdutos = new MenuListagemDeProdutos();
+//       
+//        menuListagemDeProdutos.setLocationRelativeTo(null);
+//        menuListagemDeProdutos.setVisible(true);
+
+        MenuListagem menuListagem = new MenuListagem();
+        menuListagem.setLocationRelativeTo(null);
+        menuListagem.setVisible(true);;
     }//GEN-LAST:event_btnListarActionPerformed
 
     /**
